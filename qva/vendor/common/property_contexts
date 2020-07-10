@@ -90,6 +90,7 @@ ctl.vendor.sensingdaemon                     u:object_r:vendor_ctl_vendor_wigigs
 # netmgrd ko loading
 persist.vendor.data.shs_ko_load u:object_r:vendor_data_ko_prop:s0
 persist.vendor.data.perf_ko_load u:object_r:vendor_data_ko_prop:s0
+persist.vendor.data.offload_ko_load u:object_r:vendor_data_ko_prop:s0
 
 # hvdcp_opti properties
 persist.vendor.bms.                          u:object_r:vendor_hvdcp_opti_prop:s0
@@ -120,3 +121,6 @@ ctl.start$vendor.qmuxd                       u:object_r:vendor_ctl_qmuxd_prop:s0
 
 #bluetooth property
 ro.vendor.bt.enablelazyhal                   u:object_r:vendor_bluetooth_prop:s0 exact bool
+
+#SLM
+persist.vendor.slm.                          u:object_r:vendor_slm_prop:s0
