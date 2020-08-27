@@ -145,6 +145,7 @@ genfscon sysfs /devices/platform/soc/18590100.qcom,cpu4-cpu-l3-lat/devfreq u:obj
 genfscon sysfs /devices/platform/soc/18590100.qcom,cpu5-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/18590100.qcom,cpu6-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/18590100.qcom,cpu7-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/18590100.qcom,cpu7-cpu-l3-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/18590100.qcom,snoop-l3-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
@@ -164,3 +165,11 @@ genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-1/fps_periodicity_ms   u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-2/fps_periodicity_ms   u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/power/control                             u:object_r:vendor_sysfs_graphics:s0
+
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:1/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:2/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:3/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:4/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:5/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:6/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:7/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0

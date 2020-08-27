@@ -32,6 +32,7 @@
 /dev/sp_kernel                        u:object_r:vendor_skp_device:s0
 /dev/sp_nvm                           u:object_r:vendor_sp_nvm_device:s0
 /dev/sp_keymaster                     u:object_r:vendor_sp_keymaster_device:s0
+/dev/sp_keymaster_ssr                 u:object_r:vendor_sp_keymaster_ssr_device:s0
 /dev/sp_ssr                           u:object_r:vendor_sp_ssr_device:s0
 /dev/spdaemon_ssr                     u:object_r:vendor_spdaemon_ssr_device:s0
 /dev/spss_utils                       u:object_r:vendor_spss_utils_device:s0
@@ -83,7 +84,7 @@
 /vendor/bin/hw/vendor\.qti\.hardware\.qteeconnector@1\.0-service                   u:object_r:vendor_hal_qteeconnector_qti_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.qseecom@1\.0-service                         u:object_r:vendor_hal_qseecom_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.scve\.objecttracker@1\.0-service             u:object_r:vendor_scve_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.spu@1\.0-service                       u:object_r:vendor_hal_spu_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.spu@1\.[0-1]-service                   u:object_r:vendor_hal_spu_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.scve\.panorama@1\.0-service  u:object_r:vendor_scve_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.sensorscalibrate@1\.0-service                u:object_r:vendor_hal_sensorscalibrate_qti_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.soter@1\.0-service           u:object_r:vendor_hal_soter_qti_exec:s0
@@ -176,6 +177,7 @@
 /sys/class/kgsl/kgsl/proc(/.*)?                                    u:object_r:vendor_sysfs_kgsl_proc:s0
 
 /sys/devices(/platform)?/soc/soc:qcom,spss_utils(/.*)?             u:object_r:vendor_sysfs_spss:s0
+/sys/devices(/platform)?/soc/[a-f0-9]+.qcom,vidc/sku_version       u:object_r:vendor_sysfs_sku:s0
 
 ###################################
 # data files

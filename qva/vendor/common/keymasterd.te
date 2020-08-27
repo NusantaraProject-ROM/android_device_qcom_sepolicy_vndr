@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -13,7 +13,7 @@
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
-# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
 # ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
@@ -25,17 +25,7 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-## sysmon_app
-##
-## This file defines the permissions that sysmon_apps can carry
+type vendor_keymasterd, domain;
+type vendor_keymasterd_exec, exec_type, vendor_file_type, file_type;
 
-type sysmon_app, domain;
-
-app_domain(sysmon_app)
-
-# display by the com.qualcomm.qti.sysmonappExternal.SysMonApp
-allow sysmon_app app_api_service:service_manager find;
-
-# Allow access to FastRPC
-allow sysmon_app qdsp_device:chr_file r_file_perms;
-allow sysmon_app xdsp_device:chr_file r_file_perms;
+init_daemon_domain(vendor_keymasterd)
