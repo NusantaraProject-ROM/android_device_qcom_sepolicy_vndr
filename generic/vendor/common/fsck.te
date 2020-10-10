@@ -27,4 +27,3 @@
 
 
 allow fsck vendor_persist_block_device:blk_file rw_file_perms;
-allow fsck self:capability {kill};
