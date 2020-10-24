@@ -51,6 +51,7 @@
 /dev/block/platform/soc/1d84000.ufshc/by-name/mdm1m9kefs3           u:object_r:vendor_efs_boot_dev:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/mdmddr                u:object_r:vendor_efs_boot_dev:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/vm-data               u:object_r:vendor_vm_data_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/qmcs                  u:object_r:vendor_qmcs_block_device:s0
 
 # A/B partitions.
 /dev/block/platform/soc/1d84000.ufshc/by-name/abl_[ab]              u:object_r:vendor_custom_ab_block_device:s0
@@ -135,6 +136,12 @@
 
 /sys/devices/platform/soc/98900000.qcom,turing/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/98900000.qcom,turing/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/3700000.qcom,lpass/subsys[0-9]+/name  u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/3700000.qcom,lpass/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/a300000.qcom,turing/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/a300000.qcom,turing/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
 
 /sys/devices/platform/soc/5c00000.qcom,ssc/subsys[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/5c00000.qcom,ssc/subsys[0-9]+/restart_level u:object_r:vendor_sysfs_ssr_toggle:s0
