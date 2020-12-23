@@ -1,5 +1,5 @@
-# Copyright (c) 2018 , The Linux Foundation. All rights reserved.
-#
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
 # met:
@@ -25,24 +25,18 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-recovery_only(`
- # Search and Read access for vendor_sysfs_graphics for backlight
- allow recovery vendor_sysfs_graphics:dir search;
- allow recovery vendor_sysfs_graphics:file rw_file_perms;
- # Read files on /sdcard
- allow recovery sdcard_type:dir r_dir_perms;
- allow recovery sdcard_type:file r_file_perms;
- allow recovery vfat:dir r_dir_perms;
- allow recovery vfat:file create_file_perms;
- allow recovery vfat:file rw_file_perms;
- allow recovery system_data_file:file r_file_perms;
- allow recovery system_data_file:dir r_dir_perms;
- allow recovery cache_file:dir mounton;
- allow recovery vendor_sg_device:chr_file rw_file_perms;
- allow recovery vendor_bsg_device:chr_file rw_file_perms;
- allow recovery self:capability sys_rawio;
- allow recovery vendor_sg_device:chr_file ioctl;
- allow recovery sysfs_dm:dir r_dir_perms;
- allow recovery sysfs_dm:file r_file_perms;
- allow recovery sysfs:file r_file_perms;
-')
+type vendor_hal_limits_qti, domain;
+hal_server_domain(vendor_hal_limits_qti, vendor_hal_limits)
+
+# Allow hwbinder call from hal client to server and vice-versa
+binder_call(vendor_hal_limits_client, vendor_hal_limits_server)
+binder_call(vendor_hal_limits_server, vendor_hal_limits_client)
+
+# Allow hwservice related rules
+hal_attribute_hwservice(vendor_hal_limits, vendor_hal_limits_hwservice)
+
+type vendor_hal_limits_qti_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_limits_qti)
+
+# Allow access to thermal hal
+hal_client_domain(vendor_hal_limits_qti, hal_thermal)
